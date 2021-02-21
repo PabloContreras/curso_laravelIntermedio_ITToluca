@@ -18,7 +18,7 @@ class CreateProfesorsTable extends Migration
             $table->string('nombre');
             $table->string('carrera');
             $table->unsignedInteger('edad');
-            $table->boolean('status');
+            $table->boolean('status')->default(1);
             $table->timestamps();
         });
     }

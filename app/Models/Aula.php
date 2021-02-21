@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Aula extends Model
 {
     use HasFactory;
+    protected $guarded = [];
+
+	public function grupos()
+	{
+		return $this->hasMany(Grupo::class, 'aula_id');
+	}
 }

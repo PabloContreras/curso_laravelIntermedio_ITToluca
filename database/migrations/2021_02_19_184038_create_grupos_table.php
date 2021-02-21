@@ -24,6 +24,10 @@ class CreateGruposTable extends Migration
             //      Llave fóranea en aula
             $table->unsignedBigInteger('aula_id');
             $table->foreign('aula_id')->references('id')->on('aulas');
+            //      Campos propios de la tabla
+            $table->string('horario');
+            $table->unsignedInteger('tot_alumnos');
+            $table->boolean('status');
             $table->timestamps();
         });
     }

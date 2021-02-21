@@ -9,6 +9,18 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
         <!-- CSS Files -->
         <link href="{{ asset('/css/material-dashboard.css?v=2.1.0') }}" rel="stylesheet" />
+        <style type="text/css">
+        	.row {
+        		margin-right: 0px !important;
+        		margin-left: 0px !important;
+        	}
+        	.black {
+        		color: black;
+        	}
+        	.form-control {
+        		color: black !important;
+        	}
+        </style>
     </head>
     <body class="dark-edition">
 	  	<div class="wrapper ">
@@ -73,8 +85,8 @@
 		      	</nav>
 		      	<!-- End Navbar -->
 		      	<div class="content">
-		        	<div class="container-fluid">
-		        		<div class="col-sm-12 col-md-10 col-lg-8">
+		        	<div class="container-fluid text-center">
+		        		<div class="col-sm-12 col-md-12 col-lg-12">
 		          			@yield('content')
 		          		</div>
 		        	</div>
@@ -104,5 +116,10 @@
 		<script src="{{ asset('js/plugins/bootstrap-notify.js') }}"></script>
 		<!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
 		<script src="{{ asset('js/material-dashboard.js?v=2.1.0') }}"></script>
+		<script type="text/javascript">
+			$(function () {
+       			$("[rel='tooltip']").tooltip();
+    		});
+		</script>
     </body>
 </html>
